@@ -2,3 +2,9 @@
 ImguiWithDirectX11/ImguiWithDirectX11.vcxproj.filters
 *.sln
 *.vcxproj
+imgui/
+.vs/
+bin/
+bin-int/
+!vendor/bin
+*.user

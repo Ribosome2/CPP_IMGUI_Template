@@ -1,4 +1,4 @@
-local repoPath ="../CoolIMGUIRepo/"
+local repoPath ="../imgui/"
 project "ImguiWithDirectX11"
 	kind "StaticLib"
 	language "C++"
@@ -9,27 +9,28 @@ project "ImguiWithDirectX11"
 
 	files
 	{
-		repoPath.."imgui/imconfig.h",
-		repoPath.."imgui/imgui.h",
-		repoPath.."imgui/imgui.cpp",
-		repoPath.."imgui/imgui_draw.cpp",
-		repoPath.."imgui/imgui_internal.h",
-		repoPath.."imgui/imgui_widgets.cpp",
-		repoPath.."imgui/imstb_rectpack.h",
-		repoPath.."imgui/imstb_textedit.h",
-		repoPath.."imgui/imstb_truetype.h",
-		repoPath.."imgui/imgui_demo.cpp",
-		repoPath.."imgui/examples/imgui_impl_win32.h",
-		repoPath.."imgui/examples/imgui_impl_win32.cpp",
-		repoPath.."imgui/examples/imgui_impl_dx11.h",
-		repoPath.."imgui/examples/imgui_impl_dx11.cpp",
+		repoPath.."imconfig.h",
+		repoPath.."imgui.h",
+		repoPath.."imgui.cpp",
+		repoPath.."imgui_draw.cpp",
+		repoPath.."imgui_internal.h",
+		repoPath.."imgui_widgets.cpp",
+		repoPath.."imstb_rectpack.h",
+		repoPath.."imstb_textedit.h",
+		repoPath.."imstb_truetype.h",
+		repoPath.."imgui_demo.cpp",
+		repoPath.."backends/imgui_impl_win32.h",
+		repoPath.."backends/imgui_impl_win32.cpp",
+		repoPath.."backends/imgui_impl_dx11.h",
+		repoPath.."backends/imgui_impl_dx11.cpp",
 	}
 
 	includedirs
 	{
 		"%{prj.name}/src",
-		repoPath.."imgui/",
-		repoPath.."imgui/examples",
+		repoPath,
+		repoPath.."examples",
+		repoPath.."backends",
 	}
 	filter "system:windows"
 		systemversion "latest"

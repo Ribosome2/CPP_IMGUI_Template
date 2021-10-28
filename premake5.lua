@@ -1,6 +1,6 @@
 workspace "KyleWorkSpace"
 	architecture "x64"
-	startproject "SVNLockTool"
+	startproject "KyleProject"
 
 	configurations
 	{
@@ -11,12 +11,10 @@ workspace "KyleWorkSpace"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
-IncludeDir = {}
-IncludeDir["ImguiWithDirectX11"] = "SVNLockTool/vendor/imgui"
 
 include "ImguiWithDirectX11"
 
-local imguiRepoPath ="imguiRepo"
+local imguiRepoPath ="imgui"
 project "KyleProject"
 	location "KyleProject"
 	kind "ConsoleApp"
@@ -36,9 +34,8 @@ project "KyleProject"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{IncludeDir.ImguiWithDirectX11}",
-		imguiRepoPath.."/imgui/",
-		imguiRepoPath.."/imgui/examples",
+		imguiRepoPath,
+		imguiRepoPath.."/backends",
 	}
 
 	links 
