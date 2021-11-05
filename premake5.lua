@@ -26,7 +26,8 @@ project "KyleProject"
 
 	files
 	{
-		"%{prj.name}/src/**.rc",
+		"%{prj.name}/**.rc",
+		"%{prj.name}/**.h",
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
 	}

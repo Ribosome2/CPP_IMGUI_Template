@@ -7,7 +7,7 @@
 #include "imgui_impl_dx11.h"
 #include <d3d11.h>
 #include <tchar.h>
-
+#include "../resource.h"
 // Data
 static ID3D11Device* g_pd3dDevice = NULL;
 static ID3D11DeviceContext* g_pd3dDeviceContext = NULL;
@@ -29,6 +29,14 @@ int main(int, char**)
     WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, _T("ImGui Example"), NULL };
     ::RegisterClassEx(&wc);
     HWND hwnd = ::CreateWindow(wc.lpszClassName, _T("Dear ImGui DirectX11 Example"), WS_OVERLAPPEDWINDOW, 100, 100, 1280, 800, NULL, NULL, wc.hInstance, NULL);
+    auto iconImage = LoadImage(
+        wc.hInstance, MAKEINTRESOURCE(IDI_ICON1),
+        IMAGE_ICON, 64, 64, 0);
+	wc.hIcon = static_cast<HICON>(iconImage);
+    wc.hIconSm = static_cast<HICON>(LoadImage(
+        wc.hInstance, MAKEINTRESOURCE(IDI_ICON1),
+        IMAGE_ICON, 16, 16, 0
+    ));
 
     // Initialize Direct3D
     if (!CreateDeviceD3D(hwnd))

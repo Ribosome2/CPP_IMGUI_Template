@@ -8,3 +8,4 @@ bin/
 bin-int/
 !vendor/bin
 *.user
+KyleProject/imgui.ini
