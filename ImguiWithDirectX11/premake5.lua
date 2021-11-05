@@ -19,6 +19,7 @@ project "ImguiWithDirectX11"
 		repoPath.."imstb_textedit.h",
 		repoPath.."imstb_truetype.h",
 		repoPath.."imgui_demo.cpp",
+		repoPath.."imgui_tables.cpp",
 		repoPath.."backends/imgui_impl_win32.h",
 		repoPath.."backends/imgui_impl_win32.cpp",
 		repoPath.."backends/imgui_impl_dx11.h",
