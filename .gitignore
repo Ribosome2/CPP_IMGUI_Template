@@ -9,3 +9,5 @@ bin-int/
 !vendor/bin
 *.user
 KyleProject/imgui.ini
+.idea/
+cmake-build-debug
