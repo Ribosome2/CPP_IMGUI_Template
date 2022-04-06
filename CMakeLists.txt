@@ -9,5 +9,6 @@ include_directories("imgui/backends")
 include_directories("imgui")
 
 
-add_executable(KyleProject "KyleProject/src/main.cpp")
-target_link_directories(KyleProject PUBLIC ImguiWithDirectX11)
+add_executable(${PROJECT_NAME} "KyleProject/src/main.cpp" ImguiWithDirectX11)
+target_link_directories(${PROJECT_NAME} PUBLIC ImguiWithDirectX11)
+link_libraries(${PROJECT_NAME} PUBLIC ImguiWithDirectX11 d3d11.lib dxgi.lib)

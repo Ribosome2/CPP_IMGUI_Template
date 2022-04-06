@@ -1,8 +1,8 @@
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-
-set(repoPath "../imgui")
+add_compile_definitions(IMGUI_IMPL_WIN32_DISABLE_GAMEPAD)
+include_directories("../imgui")
 add_library(ImguiWithDirectX11
         "../imgui/imconfig.h"
         "../imgui/imgui.h"
