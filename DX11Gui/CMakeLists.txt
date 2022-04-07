@@ -23,10 +23,12 @@ set(imgui_src_list
         "src/imguiCore/imgui_impl_dx11.cpp"
         )
 
+
 ADD_EXECUTABLE(${PROJECT_NAME}
         "src/main.cpp"
         "src/resource.h"
+        "DX11Gui.rc"
         ${imgui_src_list}
         )
 
-target_link_libraries(${PROJECT_NAME}  PRIVATE d3d11 dxgi)
+TARGET_LINK_LIBRARIES(${PROJECT_NAME}  PRIVATE d3d11 dxgi)
